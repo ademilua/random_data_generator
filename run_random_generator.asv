@@ -1,4 +1,5 @@
 bit_length = 32;
+% test_length = 300;
 folder = fullfile ('../','gen');
 dir = mkdir(folder);
 patterns = random_number_test_lengths(150);
@@ -10,8 +11,17 @@ for i = 1:length(patterns)
         end
         file = sprintf('%d', pattern);
         filepath = fullfile(folder, [file, '_data', '.txt']);
-        fileID = fopen(filepath,'a');
-        fprintf(fileID,'%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d \n',numbers);
+        fileID = fopen(filepath,'w');
+        fprintf(fileID,'Patterns: %d\n',patterns);
         fclose(fileID);
+        print_matrix(numbers);
     end
 end
+
+
+
+
+% patterns = test_lengths(1000);
+% for i = 1:length(patterns)
+%     disp(patterns(i));
+% end
