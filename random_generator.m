@@ -9,7 +9,7 @@ for i = 1:length(patterns)
         file_pattern_number = sprintf('%d', pattern);
         filepath = fullfile(folder, [file_pattern_number, '_data', '.txt']);
         fileID = fopen(filepath,'a');
-        fprintf(fileID,'%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d \n',random_numbers);
+        fprintf(fileID,'%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d %d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d\n',random_numbers);
         fclose(fileID);
     end
 end
